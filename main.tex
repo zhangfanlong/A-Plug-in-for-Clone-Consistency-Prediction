@@ -415,9 +415,13 @@ Email: sxh@hit.edu.cn}
 
 
 \begin{abstract}
-During software development, copy-and-paste operations always introduce the code clones into software, which also can saving a lot of valuable development time.
-Code clones always evolve with the software, and their presence can be aware by developer with {\em Clone Group and Clone Genealogy}.
-The consistent changes occurring on clone group, where clones in a same group changed at the same time, will lead to  extra maintenance cost and more cost of clone defects where the failure when necessary.
+During software development, developers always reuse existing codes resulting the introduction of code clones into software.
+As evolving with software, code clones in a clone group may be modified by developer, that leading the clone consistent change pattern to the group.
+The consistent changes occurring on clone group will lead to extra maintenance cost, and failure in making consistency when necessary will lead to clone defects.
+Therefore, we develop a plug-in tool named {\em CCP\/}, that predicting clone consistency change both at clone creating and changing times.
+CCP support to build clone genealogy to collect all the necessary clone instances to construct the machine learning models, and take the characterization of clone creating and changing instances as the input for prediction.
+When CCP monitor the create or change instance, the corresponding models can be invoked to call attention to these changes for developers taking apposite measures. 
+Our CCP is an java based tool, that only can analysis the java project, that already integrated into eclipse to help developers maintain and manage code clone at the developing time.
 
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
@@ -429,7 +433,7 @@ The consistent changes occurring on clone group, where clones in a same group ch
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Code clones, cross-project prediction, consistent change, deep learning.
+Code clones, clone consistency prediction, consistent change, plug-in, eclipse
 \end{IEEEkeywords}
 
 
